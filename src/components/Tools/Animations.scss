@@ -1,0 +1,24 @@
+/* Define the animation keyframes */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0); /* Start and end position: no vertical movement */
+  }
+  50% {
+    transform: translateY(-10px); /* Middle position: move up 10 pixels */
+  }
+}
+
+/* Apply the animation to the element */
+.upanddown {
+  animation: moveUpDown 2s ease-in-out infinite; /* 2s duration, ease-in-out timing, infinite loop */
+}
+
+
+
+
+
+
+
+
+
+
