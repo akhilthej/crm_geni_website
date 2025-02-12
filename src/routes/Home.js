@@ -1,5 +1,8 @@
 import React from "react";
-import HomeImageHero from "../assets/HomeImage.png";
+import HomeImageHero  from "../assets/HomeImage.png";
+import HomeImageHero1 from "../assets/HomeImage1.png";
+import HomeImageHero2 from "../assets/HomeImage2.png";
+import HomeImageHero3 from "../assets/HomeImage3.png";
 import { IoMdLogIn } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
 import { Helmet } from "react-helmet-async";
@@ -9,6 +12,7 @@ import {
   FaUsersCog,
   FaStar,
 } from "react-icons/fa";
+import Contactus from "./Contactus";
 
 function Home() {
   const handleDemoLink = () => {
@@ -18,18 +22,18 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Best Invoice &amp; CRM Solution for Your Business</title>
+        <title>Best Invoice & CRM Solution for Your Business</title>
         <meta
           name="description"
-          content="We are a prominent web design and development, digital marketing, Graphic designing, Advertising and branding company based in India. We have a strong track record of working with well-known brands to create high-performance, user-friendly, and secure web and mobile applications. Our expertise can transform your innovative ideas into a driving force for your business success."
+          content="Discover the ultimate invoice and CRM solution for your business. Streamline your operations, boost productivity, and drive growth with our innovative software."
         />
         <link rel="canonical" href="/" />
       </Helmet>
 
       <section className="pt-24 bg-white">
-        {/* ====== Home  Hero Section Start ====== */}
-        <section class="px-12 mx-auto max-w-7xl">
-          <div className="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center ">
+        {/* ====== Home Hero Section Start ====== */}
+        <section className="px-12 mx-auto max-w-7xl">
+          <div className="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
             <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
               <span>Supercharge</span>{" "}
               <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-primary to-secoundry lg:inline">
@@ -38,9 +42,8 @@ function Home() {
               <span>Smart Invoicing & CRM!</span>
             </h1>
             <p className="px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24">
-              Start managing your sales smarter with CRM Geni—designed to
-              simplify invoicing, track expenses, and grow your business
-              effortlessly.
+              Simplify your sales process, track expenses, and grow your
+              business effortlessly with CRM Geni.
             </p>
 
             <div className="flex flex-col items-center">
@@ -80,7 +83,7 @@ function Home() {
             </div>
           </div>
         </section>
-        {/* ====== End  Hero Section Start ====== */}
+        {/* ====== End Hero Section Start ====== */}
 
         {/* ====== Features Section Start ====== */}
         <section className="py-16 bg-secoundry rounded-md -mt-10 overflow-hidden">
@@ -89,8 +92,8 @@ function Home() {
               <span className="text-primary text-lg font-semibold">
                 Features
               </span>
-              <h2 className=" text-2xl text-gray-900 font-bold md:text-4xl">
-                Make you business run smoother.
+              <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
+                Streamline Your Business Operations
               </h2>
             </div>
             <p className="mt-4 text-[18px] text-center text-gray-900 font-bold md:text-[22px]">
@@ -195,10 +198,10 @@ function Home() {
         {/* ====== Features Section Ending ====== */}
 
         {/* ====== Cards Section Starting ====== */}
-        <div class="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
-          <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
-            <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
-              <div class="max-w-xl mb-6">
+        <div className="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+          <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
+            <div className="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
+              <div className="max-w-xl mb-6">
                 <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
                   <span>Easy</span>{" "}
                   <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-primary to-secoundry lg:inline">
@@ -206,37 +209,27 @@ function Home() {
                   </span>{" "}
                   <span>Smart Sharing !</span>
                 </h1>
-                <p class="text-black text-base md:text-lg">
+                <p className="text-black text-base md:text-lg">
                   Creating invoices is now effortless! With just a click, you
                   can generate bills, share them, and receive payments
                   seamlessly.
                 </p>
               </div>
               <div className="space-x-4">
-                <button class="text-neutral-800  text-lg font-medium inline-flex items-center">
+                <button className="text-neutral-800 text-lg font-medium inline-flex items-center">
                   <span> Learn More →</span>
                 </button>
               </div>
             </div>
-            <img
-              alt="logo"
-              width="420"
-              height="120"
-              src="https://cdn.dribbble.com/userupload/2338354/file/original-ae1855a82a249b8522e6d62be6351828.png?resize=752x"
-            />
+            <img alt="logo" width="420" height="120" src={HomeImageHero1} />
           </div>
         </div>
-        <div class="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
-          <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
-            <img
-              alt="logo"
-              width="420"
-              height="120"
-              src="https://cdn.dribbble.com/userupload/2338354/file/original-ae1855a82a249b8522e6d62be6351828.png?resize=752x"
-            />
+        <div className="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+          <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
+            <img alt="logo" width="420" height="120" src={HomeImageHero2} />
 
-            <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
-              <div class="max-w-xl mb-6">
+            <div className="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
+              <div className="max-w-xl mb-6">
                 <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
                   <span>Expenses</span>{" "}
                   <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-primary to-secoundry lg:inline">
@@ -244,23 +237,23 @@ function Home() {
                   </span>{" "}
                   <span>Now its eassy !</span>
                 </h1>
-                <p class="text-black text-base md:text-lg">
-                  Track you Spending & business expenses know how your business
+                <p className="text-black text-base md:text-lg">
+                  Track your Spending & business expenses know how your business
                   is working.
                 </p>
               </div>
               <div className="space-x-4">
-                <button class="text-neutral-800  text-lg font-medium inline-flex items-center">
+                <button className="text-neutral-800 text-lg font-medium inline-flex items-center">
                   <span> Learn More →</span>
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
-          <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
-            <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
-              <div class="max-w-xl mb-6">
+        <div className="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+          <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
+            <div className="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
+              <div className="max-w-xl mb-6">
                 <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
                   <span>Manageing you </span>{" "}
                   <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-primary to-secoundry lg:inline">
@@ -268,56 +261,49 @@ function Home() {
                   </span>{" "}
                   <span>is now easy !</span>
                 </h1>
-                <p class="text-black text-base md:text-lg">
+                <p className="text-black text-base md:text-lg">
                   Track your employees attances salery another hiring needs.
                 </p>
               </div>
               <div className="space-x-4">
-                <button class="text-neutral-800  text-lg font-medium inline-flex items-center">
+                <button className="text-neutral-800 text-lg font-medium inline-flex items-center">
                   <span> Lear more →</span>
                 </button>
               </div>
             </div>
-            <img
-              alt="logo"
-              width="420"
-              height="120"
-              src="https://cdn.dribbble.com/userupload/2338354/file/original-ae1855a82a249b8522e6d62be6351828.png?resize=752x"
-            />
+            <img alt="logo" width="420" height="120" src={HomeImageHero3} />
           </div>
         </div>
         {/* ====== Cards Section Ending ====== */}
 
         {/* ====== more Section Start ====== */}
-
         <div className="bg-primary">
           <div className="container mx-auto flex flex-col items-center py-12 sm:py-24">
-            <div className="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col  mb-5 sm:mb-10">
+            <div className="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col mb-5 sm:mb-10">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-secoundry font-black leading-7 md:leading-10">
                 Are you Looking for Software as a Service Solution
                 <span className="text-primary-STYLE1"> (Saas) </span>?
               </h1>
               <p className="mt-5 sm:mt-10 lg:w-10/12 text-secoundry font-normal text-center text-sm sm:text-lg">
-                We are here to build your your custom software solution for your
-                business needs.{" "}
+                We are here to build your custom software solution for your
+                business needs.
               </p>
             </div>
-            <div className="flex justify-center items-center">
-              <button
-                onClick={() => (window.location.href = "tel:8143407758")}
-                className="flex w-full md:w-1/2 justify-center bg-gray-800 px-4 py-2 rounded-md text-white text-[10px] items-center transition duration-300 hover:bg-gray-700"
-              >
-                <IoCall className="mr-2 text-xl transition-transform duration-300 group-hover:animate-wiggle" />
-                Contact Sales
-              </button>
-            </div>
+            <div className="flex justify-center items-center"></div>
+            <button
+              onClick={() => (window.location.href = "tel:8143407758")}
+              className="flex w-1/2 md:w-1/2 justify-center bg-gray-800 px-4 py-2 rounded-md text-white text-[10px] items-center transition duration-300 hover:bg-gray-700"
+            >
+              <IoCall className="mr-2 text-xl transition-transform duration-300 group-hover:animate-wiggle" />
+              Contact Sales
+            </button>
           </div>
         </div>
         {/* ====== more Section end ====== */}
 
         {/* ====== Pricing Section Start ====== */}
         <section className="bg-white pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] relative z-20 overflow-hidden">
-          <div className="container">
+          <div className="container mx-auto flex flex-col items-center">
             <div className="flex flex-wrap -mx-4">
               <div className="w-full px-4">
                 <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
@@ -387,7 +373,7 @@ function Home() {
               {/* Yearly Plan */}
               <div className="w-full md:w-1/2 lg:w-1/3 px-4 text-secoundry">
                 <div className="bg-primary rounded-xl relative z-10 overflow-hidden border border-primary border-opacity-20 shadow-pricing py-10 px-8 sm:p-12 lg:py-10 lg:px-6 xl:p-12 mb-10">
-                  <span className=" font-semibold text-lg block mb-4">
+                  <span className="font-semibold text-lg block mb-4">
                     Yearly Plan
                   </span>
                   <h2 className="font-bold text-dark mb-5 text-[42px]">
@@ -427,7 +413,6 @@ function Home() {
                       ✖ Built-in Inventory Management: NO
                     </p>
                     <p className="text-base text-body-color leading-loose mb-1 bg-secoundry pl-2 rounded-md text-black">
-                      {" "}
                       Up to 4 Users
                     </p>
                   </div>
@@ -475,31 +460,30 @@ function Home() {
                     <p className="text-base text-body-color leading-loose mb-1">
                       ✔ Built-in Inventory Management: YES
                     </p>
-                    <p className="text-base text-body-color leading-loose mb-1 bg-secoundry pl-2 rounded-md ">
-                      {" "}
+                    <p className="text-base text-body-color leading-loose mb-1 bg-secoundry pl-2 rounded-md">
                       Up to 10 Users
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center mt-8">
+          
+          </div>
+          <div className="flex justify-center mt-8">
               <button
                 onClick={() => (window.location.href = "tel:8143407758")}
-                className="w-full md:w-1/2 bg-primary-STYLE1 text-black py-3 px-4 rounded-md shadow-md hover:bg-primary-STYLE2 transition duration-300 flex items-center justify-center"
+                className="w-1/2 md:w-1/2 bg-primary-STYLE1 text-black py-3 px-4 rounded-md shadow-md hover:bg-primary-STYLE2 transition duration-300 flex items-center justify-center"
               >
                 <IoMdLogIn className="mr-2 text-xl transition-transform duration-300 group-hover:animate-wiggle" />
                 Contact Sales
               </button>
             </div>
-          </div>
         </section>
         {/* ====== Pricing Section End ====== */}
 
         {/* ====== Contact Section End ====== */}
-
         <section>
-          
+          <Contactus />
         </section>
         {/* ====== Contact Section End ====== */}
       </section>

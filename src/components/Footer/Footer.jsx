@@ -10,7 +10,7 @@ function Footer() {
         <img src={CSDLogo_2} className="w-24 md:w-24 lg:w-24 filter grayscale brightness-0" alt="logo" />
 
           <p class="max-w-xs mt-4 text-sm text-primary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
+          CRM Geni, a product of Cyber Space Digital, is designed to help businesses create unique, customized solutions tailored to their specific needs.
           </p>
           <div class="flex mt-8 space-x-6 text-primary">
             <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
