@@ -1,70 +1,100 @@
-import React, { useState } from 'react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import CSDLogo_2 from "../../assets/CSDLogo_2.svg";
 
-function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black bg-opacity-50 px-2 sm:px-4 py-2.5 rounded shadow">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="/" className="flex items-center">
-          <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
-            Website
-          </span>
-        </a>
-        <div className="flex items-center">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            type="button"
-            className="inline-flex items-center p-2 ml-3 text-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-400 md:hidden"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+    <nav className="bg-white shadow-md fixed w-full top-0 z-50 rounded-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link to="/">
+              <img src={CSDLogo_2} alt="CSDLogo_2" className="w-14 md:w-14 lg:w-14" />
+            </Link>
+          </div>
+          <div className="hidden md:flex space-x-4 items-center">
+            <Link to="/" className="text-gray-600 hover:text-gray-900">
+              Home
+            </Link>
+            <Link to="/store" className="text-gray-600 hover:text-gray-900">
+              Store
+            </Link>
+            <div className="relative">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-600 hover:text-gray-900 focus:outline-none"
+              >
+                Marketplace ▾
+              </button>
+              {isOpen && (
+                <div className="absolute mt-2 w-48 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/marketplace1"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Marketplace 1
+                  </Link>
+                  <Link
+                    to="/marketplace2"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Marketplace 2
+                  </Link>
+                </div>
+              )}
+            </div>
+            <Link to="/about" className="text-gray-600 hover:text-gray-900">
+              About
+            </Link>
+          </div>
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-600 hover:text-gray-900 focus:outline-none"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className={`w-full md:block md:w-auto ${isOpen ? 'block' : 'hidden'}`} id="mobile-menu">
-          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-            <li>
-              <a href="#" className="block py-2 pr-4 pl-3 text-white md:p-0 hover:text-blue-400">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 pr-4 pl-3 text-white md:p-0 hover:text-blue-400">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 pr-4 pl-3 text-white md:p-0 hover:text-blue-400">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 pr-4 pl-3 text-white md:p-0 hover:text-blue-400">
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 pr-4 pl-3 text-white md:p-0 hover:text-blue-400">
-                Contact
-              </a>
-            </li>
-          </ul>
+              ☰
+            </button>
+          </div>
         </div>
       </div>
+      {isOpen && (
+        <div className="md:hidden bg-white border-t">
+          <Link
+            to="/"
+            className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+          >
+            Home
+          </Link>
+          <Link
+            to="/store"
+            className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+          >
+            Store
+          </Link>
+          <Link
+            to="/marketplace1"
+            className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+          >
+            Marketplace 1
+          </Link>
+          <Link
+            to="/marketplace2"
+            className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+          >
+            Marketplace 2
+          </Link>
+          <Link
+            to="/about"
+            className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+          >
+            About
+          </Link>
+        </div>
+      )}
     </nav>
   );
-}
+};
 
 export default Navbar;

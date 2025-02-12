@@ -1,3 +1,5 @@
+//generateSitemap.js
+
 const fs = require('fs');
 const xmlbuilder = require('xmlbuilder');
 
@@ -6,8 +8,6 @@ const websiteURL = 'https://crmgeni.com';
 
 const urls = [
     '/',
-    '/clients',
-    '/reviews',
     '/aboutus',
     '/contactus',
     '/privacypolicy',

@@ -9,9 +9,23 @@ body {
 
 /* src/index.css */
 * {
-  background-color:#0E0C15;
 }
 
 
 
   
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the value for the height of the bounce */
+  }
+}
+
+.bounce-animation {
+  animation: bounce 1s infinite; /* Adjust the duration for speed */
+}
+
+
+

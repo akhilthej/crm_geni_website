@@ -1,0 +1,35 @@
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%); /* Start from below the screen */
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    transform: translateY(0); /* End at original position */
+    opacity: 1; /* End fully visible */
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px); /* Start slightly below */
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    transform: translateY(0); /* End at original position */
+    opacity: 1; /* End fully visible */
+  }
+}
+
+.layer-slide-up {
+  animation: slideUp 0.6s ease forwards; /* Adjust duration and easing as needed */
+}
+
+.layer-slide-up2 {
+  animation: slideUp 0.7s ease forwards; /* Adjust duration and easing as needed */
+}
+
+.layer-fade-in-up {
+  animation: fadeInUp 1.0s ease forwards; /* Adjust duration and easing as needed */
+}
+
+
