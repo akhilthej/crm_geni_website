@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const ContactForm = () => {
+  const [honeypot, setHoneypot] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,14 +15,20 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
+    // Stop submission if honeypot field is filled
+    if (honeypot) {
+      console.warn("Bot detected! Submission blocked.");
+      return;
+    }
+  
     const discordWebhookUrl =
       "https://discord.com/api/webhooks/1339290890233184357/jnNbvI7J1cDFnjg2iOeSnoow2Omt_EMU4h19EIvrqUtP0EDbnp4l17J8CRLP1efdVB89"; // Replace with your actual webhook URL
-
+  
     const message = {
       content: `Contact Form Submission\n\nName: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\nMessage: ${formData.message}`,
     };
-
+  
     try {
       const response = await fetch(discordWebhookUrl, {
         method: "POST",
@@ -30,7 +37,7 @@ const ContactForm = () => {
         },
         body: JSON.stringify(message),
       });
-
+  
       if (response.ok) {
         alert("Form submitted successfully!");
         setFormData({ name: "", email: "", subject: "", message: "" });
@@ -42,6 +49,7 @@ const ContactForm = () => {
       alert("An unexpected error occurred. Please try again later.");
     }
   };
+  
 
   return (
     <section id="contact" className="min-h-screen flex items-center justify-center bg-primary">
@@ -54,6 +62,14 @@ const ContactForm = () => {
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col">
+          <input
+  type="text"
+  name="honeypot"
+  value={honeypot}
+  onChange={(e) => setHoneypot(e.target.value)}
+  style={{ display: "none" }} // Hide the field from real users
+/>
+
             <label className="text-lg text-gray-600 mb-2">Name:</label>
             <input
               type="text"
