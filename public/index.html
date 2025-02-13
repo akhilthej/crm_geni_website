@@ -22,7 +22,10 @@
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:image" content="https://raw.githubusercontent.com/akhilthej/crm_geni_website/refs/heads/main/public/WebsiteThumbnails.jpg" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/akhilthej/crm_geni_website/refs/heads/main/public/WebsiteThumbnails.jpg"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -169,6 +172,185 @@
         src="https://www.facebook.com/tr?id=944151914526306&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+
+   <!--- Cookies Start -->
+<script>
+  "use strict";
+
+  // HTML for the cookie popup
+  var btz_cookie_popup_html = `
+    <div id="btz-cookie-popup">
+      <div class="btz-cookie-popup__c-p-card btz-cookie-popup__card">
+        <div class="btz-cookie-popup__c-p-close btz-cookie-popup--close"></div>
+        <div class="btz-cookie-popup__content">
+          <h3>This website uses cookies to ensure you get the best experience on our website. <a href="/privacypolicy" target="_blank">Privacy Policy</a>.</h3>
+          <button class="btz-cookie-popup__c-p-button">Continue</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // CSS for the cookie popup
+  var btz_cookie_popup_css = document.createElement("style");
+  btz_cookie_popup_css.type = "text/css";
+  btz_cookie_popup_css.innerHTML = `
+    #btz-cookie-popup *, #btz-cookie-popup *:after, #btz-cookie-popup *:before {
+      box-sizing: inherit !important;
+    }
+
+    #btz-cookie-popup {
+      position: fixed !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      z-index: 9999 !important;
+      font-family: "Open Sans", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    }
+
+    #btz-cookie-popup .btz-cookie-popup__card {
+      background: #0c665d !important;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.2) !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      height: 150px !important;
+      max-width: 100% !important;
+      position: relative !important;
+      width: 320px !important;
+      line-height: 1 !important;
+      margin: 20px;
+      border-radius: 4px;
+    }
+
+    #btz-cookie-popup .btz-cookie-popup--closed {
+      animation: btz-cookie-popup--close 0.4s ease-in-out forwards !important;
+    }
+
+    #btz-cookie-popup .btz-cookie-popup--opened {
+      animation: btz-cookie-popup--open 0.4s ease-in-out forwards !important;
+    }
+
+    #btz-cookie-popup .btz-cookie-popup__content {
+      padding: 15px !important;
+      text-align: center !important;
+    }
+
+    #btz-cookie-popup h3 {
+      color: #fff !important;
+      font-size: 10px !important;
+      font-weight: 100 !important;
+      line-height: 1.5;
+      margin: 0 0 0.5em !important;
+    }
+
+    #btz-cookie-popup a {
+      color: #ffffff !important;
+      font-weight: 600 !important;
+      text-decoration: none !important;
+    }
+
+    #btz-cookie-popup button {
+      background: #fff !important;
+      border-radius: 4px;
+      cursor: pointer !important;
+      font-size: 14px !important;
+      height: 3em !important;
+      line-height: 3em !important;
+      font-weight: 600 !important;
+      padding: 0 3em !important;
+      transition: box-shadow 0.3s ease !important;
+      outline: none !important;
+    }
+
+    #btz-cookie-popup button:hover {
+      background: #b5b5b5 !important;
+    }
+
+    #btz-cookie-popup .btz-cookie-popup--close:after {
+      content: "X" !important;
+      cursor: pointer !important;
+      font-size: 14px !important;
+      position: absolute !important;
+      right: 0.8em !important;
+      top: 0.5em !important;
+      transform: scaleX(1.25) !important;
+      transition: color 0.3s ease !important;
+    }
+
+    #btz-cookie-popup .btz-cookie-popup--close:hover:after {
+      color: #212121 !important;
+    }
+
+    @keyframes btz-cookie-popup--close {
+      0% { opacity: 1; transform: scale(1); }
+      20% { transform: scale(0.9, 1.1); }
+      100% { opacity: 0; transform: scale(0); }
+    }
+
+    @keyframes btz-cookie-popup--open {
+      0% { opacity: 0; transform: scale(0); }
+      80% { transform: scale(0.9, 1.1); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  `;
+
+  // Function to set a cookie
+  function btzSetCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  // Function to get a cookie
+  function btzGetCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i].trim();
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  // Function to check if the cookie popup has been visited
+  function btzCheckCookie() {
+    var btz_cookie_popup_visited = btzGetCookie("cookie_pop_visited");
+    if (btz_cookie_popup_visited === "") {
+      setTimeout(function () {
+        document.body.insertAdjacentHTML('beforeend', btz_cookie_popup_html);
+        document.body.appendChild(btz_cookie_popup_css);
+
+        var close = document.querySelector(".btz-cookie-popup__c-p-close");
+        var card = document.querySelector(".btz-cookie-popup__c-p-card");
+        var button = document.querySelector(".btz-cookie-popup__c-p-button");
+
+        card.classList.add("btz-cookie-popup--opened");
+
+        card.addEventListener("click", function (e) {
+          if (e.target === close || e.target === button) {
+            card.classList.remove("btz-cookie-popup--opened");
+            card.classList.add("btz-cookie-popup--closed");
+            btzSetCookie("cookie_pop_visited", true, 365);
+          }
+        });
+      }, 1000);
+    }
+  }
+
+  // Initialize the cookie check after a delay
+  setTimeout(btzCheckCookie, 1000); // 1 sec
+</script>
+<!--- Cookies End -->
+
+
+
+<!--- google capcha start -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<!--- google capcha End -->
+
   </head>
 
   <body style="margin: 0px">

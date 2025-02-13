@@ -15,7 +15,8 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const discordWebhookUrl = "https://discord.com/api/webhooks/1339290890233184357/jnNbvI7J1cDFnjg2iOeSnoow2Omt_EMU4h19EIvrqUtP0EDbnp4l17J8CRLP1efdVB89"; // Replace with your actual webhook URL
+    const discordWebhookUrl =
+      "https://discord.com/api/webhooks/1339290890233184357/jnNbvI7J1cDFnjg2iOeSnoow2Omt_EMU4h19EIvrqUtP0EDbnp4l17J8CRLP1efdVB89"; // Replace with your actual webhook URL
 
     const message = {
       content: `Contact Form Submission\n\nName: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\nMessage: ${formData.message}`,
@@ -43,53 +44,72 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="p-6 mx-auto max-w-xl bg-primary rounded-md mt-4 font-[sans-serif]">
-      <h1 className="text-2xl text-secoundry   font-bold text-center">Contact Us</h1>
-      <form onSubmit={handleSubmit} className="mt-8 space-y-4">
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all"
-          required
-        />
-        <input
-          type="text"
-          name="subject"
-          placeholder="Subject"
-          value={formData.subject}
-          onChange={handleChange}
-          className="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all"
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Message"
-          rows="4"
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm pt-3 outline-none transition-all"
-          required
-        ></textarea>
-        <button
-          type="submit"
-          className="text-white bg-black hover:bg-gray-900 tracking-wide text-sm px-4 py-2.5 w-full outline-none"
-        >
-          Send
-        </button>
-      </form>
-    </div>
+    <section id="contact" className="min-h-screen flex items-center justify-center bg-primary">
+      <div className="p-6 mx-auto max-w-xl bg-white rounded-md shadow-md font-[sans-serif]">
+        <h1 className="text-3xl text-black font-bold text-center mb-4">
+          Get in Touch
+        </h1>
+        <p className="text-lg text-gray-600 text-center mb-8">
+          We'd love to hear from you! Please fill out the form below to get in touch with us.
+        </p>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="flex flex-col">
+            <label className="text-lg text-gray-600 mb-2">Name:</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="John Doe"
+              value={formData.name}
+              onChange={handleChange}
+              className="py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all"
+              required
+            />
+          </div>
+          <div className="flex flex-col">
+            <label className="text-lg text-gray-600 mb-2">Email:</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="john.doe@example.com"
+              value={formData.email}
+              onChange={handleChange}
+              className="py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all"
+              required
+            />
+          </div>
+          <div className="flex flex-col">
+            <label className="text-lg text-gray-600 mb-2">Subject:</label>
+            <input
+              type="text"
+              name="subject"
+              placeholder="Hello World"
+              value={formData.subject}
+              onChange={handleChange}
+              className="py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all"
+              required
+            />
+          </div>
+          <div className="flex flex-col">
+            <label className="text-lg text-gray-600 mb-2">Message:</label>
+            <textarea
+              name="message"
+              placeholder="Type your message here..."
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+              className="px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm pt-3 outline-none transition-all"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="text-white bg-black hover:bg-gray-900 tracking-wide text-sm px-4 py-2.5 w-full outline-none"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
   );
 };
 
