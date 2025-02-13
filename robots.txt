@@ -1,7 +1,4 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
 User-agent: *
 Allow: /
 
-Sitemap: https://cyberspacedigital.in/sitemap.xml
+Sitemap: https://crmgeni.com/sitemap.xml
