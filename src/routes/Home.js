@@ -255,9 +255,9 @@ function Home() {
             <div className="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
               <div className="max-w-xl mb-6">
                 <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
-                  <span>Manageing you </span>{" "}
+                  <span>Managing your </span>{" "}
                   <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-primary to-secoundry lg:inline">
-                    Employess
+                  Employees
                   </span>{" "}
                   <span>is now easy !</span>
                 </h1>
