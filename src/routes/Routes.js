@@ -9,6 +9,7 @@ import Disclaimer from "./Documents/Disclaimer";
 
 import Error404 from "../components/Tools/Error404";
 import Home from "./Home";
+import Aboutus from './Aboutus'
 
 export {
   /*Fixed */
@@ -20,6 +21,6 @@ export {
   Disclaimer,
   ShippingandDelivery,
   Error404,
-  Home,
+  Home,Aboutus,
   ReturnPolicy,
 };

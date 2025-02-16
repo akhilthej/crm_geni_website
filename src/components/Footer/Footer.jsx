@@ -51,32 +51,18 @@ function Footer() {
               Company
             </p>
             <nav class="flex flex-col mt-4 space-y-2 text-sm text-primary">
-              <a class="hover:opacity-75" href> About </a>
-              <a class="hover:opacity-75" href> Meet the Team </a>
-              <a class="hover:opacity-75" href> History </a>
-              <a class="hover:opacity-75" href> Careers </a>
+              <a class="hover:opacity-75" href="/about"> About </a>
+              <a class="hover:opacity-75" href="https://cyberspacedigital.in/"> History </a>
+              <a class="hover:opacity-75" href="https://cyberspacedigital.in/careers"> Careers </a>
             </nav>
           </div>
-          <div>
-            <p class="font-semibold text-primary">
-              Services
-            </p>
-            <nav class="flex flex-col mt-4 space-y-2 text-sm text-primary">
-              <a class="hover:opacity-75" href> 1on1 Coaching </a>
-              <a class="hover:opacity-75" href> Company Review </a>
-              <a class="hover:opacity-75" href> Accounts Review </a>
-              <a class="hover:opacity-75" href> HR Consulting </a>
-              <a class="hover:opacity-75" href> SEO Optimisation </a>
-            </nav>
-          </div>
+          
           <div>
             <p class="font-semibold text-primary">
               Helpful Links
             </p>
             <nav class="flex flex-col mt-4 space-y-2 text-sm text-primary">
-              <a class="hover:opacity-75" href> Contact </a>
-              <a class="hover:opacity-75" href> FAQs </a>
-              <a class="hover:opacity-75" href> Live Chat </a>
+              <a class="hover:opacity-75" href="#contact"> Contact </a>
             </nav>
           </div>
           <div>
@@ -84,9 +70,9 @@ function Footer() {
               Legal
             </p>
             <nav class="flex flex-col mt-4 space-y-2 text-sm text-primary">
-              <a class="hover:opacity-75" href> Privacy Policy </a>
-              <a class="hover:opacity-75" href> Terms &amp; Conditions </a>
-              <a class="hover:opacity-75" href> Returns Policy </a>
+              <a class="hover:opacity-75" href="/privacypolicy"> Privacy Policy </a>
+              <a class="hover:opacity-75" href="/termsconditions"> Terms &amp; Conditions </a>
+              <a class="hover:opacity-75"  href="/returnpolicy"> Returns Policy </a>
               <a class="hover:opacity-75" href> Accessibility </a>
             </nav>
           </div>

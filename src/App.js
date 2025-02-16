@@ -9,12 +9,13 @@ import {
   ShippingandDelivery,
   ReturnPolicy,
   Error404,
-  Home,
+  Home,Aboutus,
 } from "./routes/Routes";
 
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/*", element: <Error404 /> },
+  { path: "/about", element: <Aboutus /> },
 
   { path: "/privacypolicy", element: <PrivacyPolicy /> },
   { path: "/termsconditions", element: <TermsnConditions /> },
