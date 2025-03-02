@@ -14,6 +14,8 @@ import {
   FaStar,
 } from "react-icons/fa";
 import Contactus from "./Contactus";
+import Magicqr_Google from "../assets/Magicqr_Google.mp4";
+import google_map_review_ai from '../assets/google_map_review_ai.png'
 
 function Home() {
   const location = useLocation();
@@ -30,6 +32,9 @@ function Home() {
   const handleDemoLink = () => {
     window.open("https://demo.crmgeni.com/", "_blank");
   };
+  const handleMagicQrLink = () => {
+    window.open("https://magicqr.crmgeni.com/signup", "_blank");
+  };
 
   return (
     <>
@@ -43,6 +48,57 @@ function Home() {
       </Helmet>
 
       <section className="pt-24 bg-white">
+
+      {/* ====== Magic Qr Section Starting ====== */}
+<div className="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+  <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
+    <div className="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
+      <div className="max-w-xl mb-6">
+        <p className="text-primary font-black">New Product</p>
+        <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+          <span>Magic QR</span>{" "}
+          <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-primary to-secoundry lg:inline">
+            Solution
+          </span>{" "}
+          <span>For your Online Reviews</span>
+        </h1>
+        <p className="text-black text-base md:text-lg">
+          Take control of your online reputation with our smart review
+          management system! Reviews below three stars are routed into a
+          private feedback loop for improvement, while four- and
+          five-star reviews get published on Google Maps—enhancing your
+          credibility and attracting more customers effortlessly.
+        </p>
+      </div>
+      <div className="flex flex-col items-center">
+        <button
+          onClick={handleMagicQrLink}
+          className="w-full md:w-1/2 bg-primary-STYLE1 text-black py-3 px-4 rounded-md shadow-md hover:bg-primary-STYLE2 transition duration-300 flex items-center justify-center group mb-4"
+        >
+          <IoMdLogIn className="mr-2 text-xl transition-transform duration-300 group-hover:animate-wiggle" />
+          Sign up Now
+        </button>
+      </div>
+    </div>
+    <div className="flex items-end">
+      <img
+        src={google_map_review_ai}
+        alt="Man leaning on wall"
+        className="w-44 h-full object-cover -ml-8 z-1"
+      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-52 h-full object-cover rounded-lg z-2 -ml-10 drop-shadow-md"
+        src={Magicqr_Google}
+      />
+    </div>
+  </div>
+</div>
+{/* ====== Magic Qr Ending ====== */}
+
         {/* ====== Home Hero Section Start ====== */}
         <section className="px-12 mx-auto max-w-7xl">
           <div className="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
@@ -212,6 +268,8 @@ function Home() {
         </section>
         {/* ====== Features Section Ending ====== */}
 
+      
+
         {/* ====== Cards Section Starting ====== */}
         <div className="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
@@ -234,6 +292,7 @@ function Home() {
             <img alt="logo" width="420" height="120" src={HomeImageHero1} />
           </div>
         </div>
+
         <div className="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
             <img alt="logo" width="420" height="120" src={HomeImageHero2} />
@@ -255,6 +314,7 @@ function Home() {
             </div>
           </div>
         </div>
+
         <div className="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
             <div className="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
@@ -302,187 +362,105 @@ function Home() {
         {/* ====== more Section end ====== */}
 
         {/* ====== Pricing Section Start ====== */}
-        <section
-          id="price-table"
-          className="bg-white pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] relative z-20 overflow-hidden"
-        >
-          <div className="container mx-auto flex flex-col items-center">
-            <div className="flex flex-wrap -mx-4">
-              <div className="w-full px-4">
-                <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
-                  <span className="font-semibold text-lg text-primary mb-2 block">
-                    Pricing Table
-                  </span>
-                  <h2 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
-                    Our Pricing Plans
-                  </h2>
-                  <p className="text-base text-body-color">
-                    Choose a plan that fits your business needs. Our flexible
-                    pricing options ensure you get the best value for your
-                    investment.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-wrap justify-center -mx-4">
-              {/* Monthly Plan */}
-              <div className="w-full md:w-1/2 lg:w-1/3 px-4">
-                <div className="bg-white rounded-xl relative z-10 overflow-hidden border border-primary border-opacity-20 shadow-pricing py-10 px-8 sm:p-12 lg:py-10 lg:px-6 xl:p-12 mb-10">
-                  <span className="text-primary font-semibold text-lg block mb-4">
-                    Monthly Plan
-                  </span>
-                  <h2 className="font-bold text-dark mb-5 text-[42px]">
-                    1250 INR
-                    <span className="text-base text-body-color font-medium">
-                      {" "}
-                      / month
-                    </span>
-                  </h2>
-                  <p className="text-base text-body-color pb-8 mb-8 border-b border-[#F2F2F2]">
-                    Ideal for startups and small businesses looking to manage
-                    their invoicing and CRM needs effectively.
-                  </p>
-                  <div className="mb-7">
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ All Features
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Data Storage: Unlimited
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Sales Pipeline: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Email Invoice: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Shared Menu: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Mobile Responsive: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Clients & Leads Management: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✖ Built-in Inventory Management: NO
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1 bg-secoundry pl-2 rounded-md">
-                      Up to 2 Users
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {/* Yearly Plan */}
-              <div className="w-full md:w-1/2 lg:w-1/3 px-4 text-secoundry">
-                <div className="bg-primary rounded-xl relative z-10 overflow-hidden border border-primary border-opacity-20 shadow-pricing py-10 px-8 sm:p-12 lg:py-10 lg:px-6 xl:p-12 mb-10">
-                  <span className="font-semibold text-lg block mb-4">
-                    Yearly Plan
-                  </span>
-                  <h2 className="font-bold text-dark mb-5 text-[42px]">
-                    1050 INR
-                    <span className="text-base text-body-color font-medium">
-                      {" "}
-                      / month
-                    </span>
-                  </h2>
-                  <p className="text-base text-body-color pb-8 mb-8 border-b border-[#F2F2F2]">
-                    Best value for businesses looking for long-term solutions
-                    with comprehensive features.
-                  </p>
-                  <div className="mb-7">
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ All Features
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Data Storage: Unlimited
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Sales Pipeline: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Email Invoice: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Shared Menu: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Mobile Responsive: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Clients & Leads Management: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✖ Built-in Inventory Management: NO
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1 bg-secoundry pl-2 rounded-md text-black">
-                      Up to 4 Users
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {/* Custom Plan */}
-              <div className="w-full md:w-1/2 lg:w-1/3 px-4">
-                <div className="bg-white rounded-xl relative z-10 overflow-hidden border border-primary border-opacity-20 shadow-pricing py-10 px-8 sm:p-12 lg:py-10 lg:px-6 xl:p-12 mb-10">
-                  <span className="text-primary font-semibold text-lg block mb-4">
-                    Custom Plan
-                  </span>
-                  <h2 className="font-bold text-dark mb-5 text-[42px]">
-                    1500 INR
-                    <span className="text-base text-body-color font-medium">
-                      {" "}
-                      / month
-                    </span>
-                  </h2>
-                  <p className="text-base text-body-color pb-8 mb-8 border-b border-[#F2F2F2]">
-                    Tailored solutions for businesses with specific needs.
-                    Installation charges may apply.
-                  </p>
-                  <div className="mb-7">
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ All Features / Customizable
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Data Storage: Unlimited
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Sales Pipeline: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Email Invoice: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Shared Menu: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Mobile Responsive: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Clients & Leads Management: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1">
-                      ✔ Built-in Inventory Management: YES
-                    </p>
-                    <p className="text-base text-body-color leading-loose mb-1 bg-secoundry pl-2 rounded-md">
-                      Up to 10 Users
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-center mt-8">
-            <button
-              onClick={() => (window.location.href = "tel:8143407758")}
-              className="w-1/2 md:w-1/2 bg-primary-STYLE1 text-black py-3 px-4 rounded-md shadow-md hover:bg-primary-STYLE2 transition duration-300 flex items-center justify-center"
+        <div className="flex flex-wrap justify-center items-center -mx-4 my-10">
+          {[
+            {
+              title: "Starter",
+              price: "1250 INR",
+              features: [
+                "Invoicing via Email and WhatsApp",
+                "Expenditures Tracker",
+                "Customer Database",
+                "Display Menu Card",
+                "Full Business Analysis Report",
+                "QR & UPI Payment Gateway",
+                "Magic QR for Google Reviews",
+              ],
+              users: "1",
+              bgColor: "bg-white",
+              textColor: "text-black",
+            },
+            {
+              title: "Mid",
+              price: "1050 INR",
+              features: [
+                "Complete Billing Solution",
+                "Expenditures Tracker",
+                "Customer Database",
+                "Separate Management for Product & Services",
+                "Display Menu Card",
+                "Leads Management",
+                "Full Business Analysis Report",
+                "QR & UPI Payment Gateway",
+                "Magic QR for Google Reviews",
+              ],
+              users: "4",
+              bgColor: "bg-primary",
+              textColor: "text-white",
+            },
+            {
+              title: "High",
+              price: "1500 INR",
+              features: [
+                "Complete Billing Solution",
+                "Expenditures Tracker",
+                "Customer Database",
+                "Complete Employment Management System",
+                "Separate management for Product & Services with inventory system",
+                "Display Menu Card",
+                "Leads Management",
+                "Full Business Analysis Report",
+                "QR & UPI Payment Gateway",
+                "Appointment System",
+                "Magic QR for Google Reviews",
+                "AI - CRM Geni (Recommendations)",
+              ],
+              users: "10",
+              bgColor: "bg-primary-100",
+              textColor: "text-white",
+            },
+          ].map((plan, index) => (
+            <div
+              key={index}
+              className="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 px-4 flex justify-center"
             >
-              <IoMdLogIn className="mr-2 text-xl transition-transform duration-300 group-hover:animate-wiggle" />
-              Contact Sales
-            </button>
-          </div>
-        </section>
-        {/* ====== Pricing Section End ====== */}
+              <div
+                className={`${plan.bgColor} rounded-xl relative z-10 overflow-hidden border border-primary border-opacity-20 shadow-pricing py-10 px-8 sm:p-12 lg:py-10 lg:px-6 xl:p-12 mb-10 w-full max-w-sm`}
+              >
+                <span
+                  className={`font-semibold text-lg block mb-4 ${plan.textColor}`}
+                >
+                  {plan.title} Plan
+                </span>
+                <h2 className={`font-bold text-[42px] mb-5 ${plan.textColor}`}>
+                  {plan.price} / month
+                </h2>
+                <p
+                  className={`text-base pb-8 mb-8 border-b border-[#F2F2F2] ${plan.textColor}`}
+                >
+                  Ideal for {plan.title} businesses.
+                </p>
+                <div className="mb-7">
+                  <ul className="list-disc pl-5">
+                    {plan.features.map((feature, index) => (
+                      <li
+                        key={index}
+                        className={`text-base leading-loose ${plan.textColor}`}
+                      >
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-base leading-loose mt-2 bg-secoundry pl-2 rounded-md text-black">
+                    {plan.users} Users
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
+        {/* ====== Pricing Section End ====== */}
 
         {/* ====== Contact Section End ====== */}
         <section>
@@ -491,7 +469,10 @@ function Home() {
         {/* ====== Contact Section End ====== */}
 
         {/* ====== FAQ Section End ====== */}
-        <section id='faq' className="min-h-screen flex items-center justify-center">
+        <section
+          id="faq"
+          className="min-h-screen flex items-center justify-center"
+        >
           <div className="max-w-screen-xl mx-auto px-5 bg-white">
             <div className="flex flex-col items-center">
               <h2 className="font-bold text-5xl mt-5 tracking-tight text-primary">
