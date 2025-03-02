@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.f3888f40.css",
-    "main.js": "/static/js/main.2252e068.js",
+    "main.css": "/static/css/main.1f144eca.css",
+    "main.js": "/static/js/main.cf476bf7.js",
+    "static/media/Magicqr_Google.mp4": "/static/media/Magicqr_Google.86baff6db48bc90ba485.mp4",
+    "static/media/google_map_review_ai.png": "/static/media/google_map_review_ai.b2763f69d495bf677f63.png",
     "static/media/HomeImage2.png": "/static/media/HomeImage2.2c67c4cfad09938c063e.png",
     "static/media/HomeImage3.png": "/static/media/HomeImage3.098ee4a8917bb8c4577b.png",
     "static/media/HomeImage1.png": "/static/media/HomeImage1.b908545ddb65edafd0af.png",
     "static/media/HomeImage.png": "/static/media/HomeImage.78f30fd96bca6042478b.png",
     "static/media/CSDLogo_2.svg": "/static/media/CSDLogo_2.725fdd14e5b910a4abab33008a84c99c.svg",
     "index.html": "/index.html",
-    "main.f3888f40.css.map": "/static/css/main.f3888f40.css.map",
-    "main.2252e068.js.map": "/static/js/main.2252e068.js.map"
+    "main.1f144eca.css.map": "/static/css/main.1f144eca.css.map",
+    "main.cf476bf7.js.map": "/static/js/main.cf476bf7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3888f40.css",
-    "static/js/main.2252e068.js"
+    "static/css/main.1f144eca.css",
+    "static/js/main.cf476bf7.js"
   ]
 }
