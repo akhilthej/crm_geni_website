@@ -49,13 +49,13 @@ function Home() {
 
       <section className="pt-24 bg-white">
 
-      {/* ====== Magic Qr Section Starting ====== */}
-<div className="px-4 bg-white mb-8 py-8 rounded-3xl mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+{/* ====== Magic Qr Section Starting ====== */}
+<div className="px-4 bg-white rounded-2xl mb-8 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
   <div className="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
     <div className="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
       <div className="max-w-xl mb-6">
-        <p className="text-primary font-black">New Product</p>
-        <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+        <p className="text-primary font-black text-lg sm:text-xl">New Product</p>
+        <h1 className="mb-8 text-3xl sm:text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-5xl md:tracking-tight">
           <span>Magic QR</span>{" "}
           <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-primary to-secoundry lg:inline">
             Solution
@@ -80,18 +80,18 @@ function Home() {
         </button>
       </div>
     </div>
-    <div className="flex items-end">
+    <div className="flex items-end justify-center">
       <img
         src={google_map_review_ai}
         alt="Man leaning on wall"
-        className="w-44 h-full object-cover -ml-8 z-1"
+        className="w-[200px] h-auto object-cover -ml-8 z-1 sm:w-[250px] lg:w-[320px]"
       />
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="w-52 h-full object-cover rounded-lg z-2 -ml-10 drop-shadow-md"
+        className="w-40 h-auto object-cover rounded-lg z-2 -ml-6 drop-shadow-md sm:w-52 lg:w-52"
         src={Magicqr_Google}
       />
     </div>
